@@ -8,7 +8,8 @@ const { validateRequest } = require('../../lib/security');
 // Supported services and their environment variable keys
 const SERVICE_MAP = {
   'assemblyai': 'ASSEMBLYAI_API_KEY',
-  'deepl': 'DEEPL_API_KEY'
+  'deepl': 'DEEPL_API_KEY',
+  'gemini': 'GEMINI_API_KEY'
 };
 
 module.exports = (req, res) => {

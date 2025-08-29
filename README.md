@@ -6,7 +6,7 @@ Simple, secure proxy for safe API key management with dynamic domain validation.
 - Secure API key distribution to same-domain applications
 - Dynamic origin validation without hardcoded domains
 - Rate limiting and bot protection
-- Support for multiple API services (AssemblyAI, DeepL)
+- Support for multiple API services (AssemblyAI, DeepL, Gemini)
 
 ## Architecture
 ```
@@ -17,6 +17,7 @@ Client → External API (direct call with received key)
 ## Endpoints
 - `GET /api/keys/assemblyai` - Get AssemblyAI API key
 - `GET /api/keys/deepl` - Get DeepL API key
+- `GET /api/keys/gemini` - Get Gemini API key
 
 ## Security Features
 - **Dynamic Domain Validation**: Same root domain check (e.g., `*.ygna.blog`)
@@ -29,6 +30,7 @@ Client → External API (direct call with received key)
 ```bash
 ASSEMBLYAI_API_KEY="your-assemblyai-api-key"
 DEEPL_API_KEY="your-deepl-api-key"
+GEMINI_API_KEY="your-gemini-api-key"
 ```
 
 ## Usage Example

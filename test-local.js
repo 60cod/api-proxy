@@ -9,6 +9,7 @@ const url = require('url');
 // Mock environment for testing
 process.env.ASSEMBLYAI_API_KEY = 'test-assemblyai-key-12345';
 process.env.DEEPL_API_KEY = 'test-deepl-key-67890';
+process.env.GEMINI_API_KEY = 'test-gemini-key-67890';
 
 const handler = require('./api/keys/[service].js');
 
@@ -32,6 +33,7 @@ server.listen(PORT, () => {
   console.log('Test endpoints:');
   console.log('  GET http://localhost:3001/api/keys/assemblyai');
   console.log('  GET http://localhost:3001/api/keys/deepl');
+  console.log('  GET http://localhost:3001/api/keys/gemini');
   console.log('  GET http://localhost:3001/api/keys/invalid');
   console.log('');
   console.log('Test with same domain origin:');
